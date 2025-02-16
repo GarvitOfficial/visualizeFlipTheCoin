@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flip Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="coin-container">
+            <div class="coin">
+                <span>H</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="input-container">
+                <input type="number" id="flipCount" value="1" min="1" max="10000">
+                <label class="toggle">
+                    <input type="checkbox" id="fastMode">
+                    Fast Mode
+                </label>
+            </div>
+            <button id="flipButton">Flip Once</button>
+            <button id="multiFlipButton">Flip Multiple Times</button>
+            <button id="stopButton" disabled>Stop</button>
+            <button id="resetButton">Reset</button>
+        </div>
+
+        <div class="stats">
+            <div>Total Flips: <span id="totalFlips">0</span></div>
+            <div>Heads: <span id="headsCount">0</span></div>
+            <div>Tails: <span id="tailsCount">0</span></div>
+            <div>Current Probability (Heads): <span id="probability">0.0000</span></div>
+        </div>
+
+        <div class="graphs-container">
+            <div class="graph-box">
+                <h3>Probability Over Time</h3>
+                <canvas id="lineGraph"></canvas>
+            </div>
+            <div class="graph-box">
+                <h3>Current Probability Distribution</h3>
+                <canvas id="barGraph"></canvas>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>Created with ❤️ by <a href="http://github.com/garvitOfficial/" target="_blank">Garvit</a></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
